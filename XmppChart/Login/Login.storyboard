@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="g3l-bg-iu5">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="UXv-tM-jhz">
+            <objects>
+                <viewController id="g3l-bg-iu5" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VSa-2T-HCH"/>
+                        <viewControllerLayoutGuide type="bottom" id="9lk-Xe-JcE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E6k-7V-MET">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHR-aJ-xZx">
+                                <rect key="frame" x="0.0" y="40" width="320" height="180"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="alm-2Q-geg">
+                                        <rect key="frame" x="20" y="9" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="g3l-bg-iu5" id="0et-en-sMe"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="thU-O2-qth">
+                                        <rect key="frame" x="20" y="53" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="g3l-bg-iu5" id="MSC-p1-Xlm"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="zhengjing.local" borderStyle="roundedRect" placeholder="请输入服务器名称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Voe-Gn-Ug8">
+                                        <rect key="frame" x="20" y="96" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="g3l-bg-iu5" id="Y8D-hs-vAa"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eA3-P3-4Jz">
+                                        <rect key="frame" x="20" y="139" width="100" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="注册" backgroundImage="LoginwhiteBtn">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="userLogin:" destination="g3l-bg-iu5" eventType="touchUpInside" id="vXK-Sr-uzz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfl-cM-gh0">
+                                        <rect key="frame" x="200" y="139" width="100" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="登录" backgroundImage="LoginGreenBigBtn">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="userLogin:" destination="g3l-bg-iu5" eventType="touchUpInside" id="7oK-zQ-9zC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96078437566757202" green="0.97647064924240112" blue="0.92549026012420654" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="RBp-yG-wWv"/>
+                                    <constraint firstAttribute="height" constant="180" id="tjF-WH-Ud3"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版权所有(C) 2013-2014 典范App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgU-it-ZM8">
+                                <rect key="frame" x="0.0" y="220" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="UJS-3s-23E"/>
+                                    <constraint firstAttribute="height" constant="21" id="mQf-jI-goc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qgU-it-ZM8" firstAttribute="top" secondItem="vHR-aJ-xZx" secondAttribute="bottom" id="8uT-aC-oLj"/>
+                            <constraint firstItem="qgU-it-ZM8" firstAttribute="leading" secondItem="E6k-7V-MET" secondAttribute="leading" id="GkV-uW-iyx"/>
+                            <constraint firstAttribute="trailing" secondItem="vHR-aJ-xZx" secondAttribute="trailing" id="YEs-0j-YyE"/>
+                            <constraint firstAttribute="trailing" secondItem="qgU-it-ZM8" secondAttribute="trailing" id="b0F-h0-Spn"/>
+                            <constraint firstItem="vHR-aJ-xZx" firstAttribute="leading" secondItem="E6k-7V-MET" secondAttribute="leading" id="lBD-B2-CEb"/>
+                            <constraint firstItem="vHR-aJ-xZx" firstAttribute="top" secondItem="VSa-2T-HCH" secondAttribute="bottom" constant="20" id="q2G-dK-pmS"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="hostNameText" destination="Voe-Gn-Ug8" id="B7V-3A-EJa"/>
+                        <outlet property="loginButton" destination="Kfl-cM-gh0" id="r04-oI-b0h"/>
+                        <outlet property="passwordText" destination="thU-O2-qth" id="2GQ-HU-rup"/>
+                        <outlet property="registerButton" destination="eA3-P3-4Jz" id="oRw-5M-sw2"/>
+                        <outlet property="topConstraint" destination="q2G-dK-pmS" id="t4s-Tu-oRS"/>
+                        <outlet property="usernameText" destination="alm-2Q-geg" id="Dz3-bw-2v2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2qD-ko-Yq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="-10"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LoginGreenBigBtn" width="21" height="47"/>
+        <image name="LoginwhiteBtn" width="21" height="47"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
